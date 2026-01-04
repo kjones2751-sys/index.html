@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Next Level Trading – Free Playbook</title>
+  <meta name="description" content="Get the FREE Next Level Pocket Option Playbook. Learn when to BUY, SELL, or WAIT with a rule-based system."/>
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --card:#111111;
+      --text:#f5f5f5;
+      --muted:#bdbdbd;
+      --gold:#d4af37;
+      --gold2:#b9901f;
+      --border:#1f1f1f;
+      --shadow: 0 12px 30px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(212,175,55,.18), transparent 55%),
+                  radial-gradient(900px 600px at 110% 20%, rgba(212,175,55,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    a{color:var(--gold); text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 60px;}
+    .topbar{
+      display:flex; justify-content:space-between; align-items:center;
+      gap:12px; padding:10px 0 26px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.4px;
+    }
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px; border:1px solid var(--border);
+      border-radius:999px; background:rgba(255,255,255,.03);
+      color:var(--muted); font-size:13px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.25fr .9fr;
+      gap:18px;
+      align-items:start;
+    }
+    @media (max-width: 880px){
+      .hero{grid-template-columns:1fr; }
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card .pad{padding:22px;}
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height:1.08;
+      letter-spacing:-.7px;
+    }
+    .sub{
+      color:var(--muted);
+      font-size: clamp(16px, 2vw, 18px);
+      margin:0 0 18px;
+    }
+    .bullets{
+      margin:16px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .bullets li{
+      display:flex; gap:10px;
+      padding:12px 12px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background: rgba(0,0,0,.25);
+    }
+    .check{
+      width:22px; height:22px; flex:0 0 22px;
+      border-radius:6px;
+      background: rgba(212,175,55,.12);
+      border:1px solid rgba(212,175,55,.35);
+      display:grid; place-items:center;
+      color:var(--gold);
+      font-weight:900;
+      margin-top:1px;
+    }
+    .bullets span{color:var(--text)}
+    .muted{color:var(--muted)}
+    .form-title{
+      font-size:18px; font-weight:800; margin:0 0 6px;
+    }
+    .form-sub{margin:0 0 14px; color:var(--muted); font-size:14px}
+    form{display:grid; gap:10px; margin-top:12px;}
+    input{
+      width:100%;
+      padding:14px 14px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.35);
+      color:var(--text);
+      font-size:16px;
+      outline:none;
+    }
+    input:focus{border-color: rgba(212,175,55,.55)}
+    .btn{
+      cursor:pointer;
+      border:none;
+      padding:14px 14px;
+      border-radius:14px;
+      font-weight:900;
+      font-size:16px;
+      background: linear-gradient(180deg, var(--gold), var(--gold2));
+      color:#0b0b0b;
+      transition: transform .06s ease, filter .15s ease;
+    }
+    .btn:hover{filter: brightness(1.03)}
+    .btn:active{transform: scale(.99)}
+    .fine{
+      margin:10px 0 0;
+      font-size:12px;
+      color:var(--muted);
+    }
+    .section{
+      margin-top:18px;
+      padding-top:18px;
+      border-top:1px solid var(--border);
+    }
+    .kicker{
+      font-weight:900;
+      color:var(--gold);
+      letter-spacing:.7px;
+      font-size:12px;
+      text-transform:uppercase;
+      margin:0 0 8px;
+    }
+    .h3{
+      margin:0 0 8px;
+      font-size:18px;
+      font-weight:900;
+    }
+    .cta2{
+      display:grid; gap:10px; margin-top:10px;
+    }
+    .btn-outline{
+      display:inline-block;
+      text-align:center;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(212,175,55,.45);
+      background: rgba(212,175,55,.08);
+      color:var(--gold);
+      font-weight:900;
+    }
+    .urgency{
+      margin-top:12px;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px dashed rgba(212,175,55,.35);
+      background: rgba(212,175,55,.06);
+      color: var(--muted);
+      font-size:13px;
+    }
+    .footer{
+      margin-top:26px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+    /* Thank you modal */
+    .modal{
+      position:fixed; inset:0;
+      background: rgba(0,0,0,.72);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      z-index:999;
+    }
+    .modal.open{display:flex;}
+    .modal .box{
+      max-width:640px; width:100%;
+      border-radius: var(--radius);
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      box-shadow: var(--shadow);
+      padding:20px;
+    }
+    .modal h2{margin:0 0 8px; font-size:26px;}
+    .modal p{margin:0 0 12px; color:var(--muted);}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--gold)"></span>
+        <span>NEXT LEVEL TRADING</span>
+      </div>
+      <div class="badge">Black • Gold • White • Rule-Based</div>
+    </div>
+
+    <div class="hero">
+      <!-- Left: Message -->
+      <div class="card">
+        <div class="pad">
+          <h1>Learn How to Trade Pocket Option With Rules — Not Guessing</h1>
+          <p class="sub">
+            Get a simple, beginner-friendly playbook that shows you exactly when to <b>BUY</b>, <b>SELL</b>, or <b>WAIT</b>
+            so you stop entering early and start trading with structure.
+          </p>
+
+          <ul class="bullets">
+            <li><div class="check">✓</div><span>The <b>exact indicators</b> and settings I use (no confusion)</span></li>
+            <li><div class="check">✓</div><span>My <b>entry confirmation checklist</b> to avoid “too early” trades</span></li>
+            <li><div class="check">✓</div><span>When to trade — and when to <b>STAY OUT</b> (your secret weapon)</span></li>
+            <li><div class="check">✓</div><span>Simple risk control for <b>small accounts</b></span></li>
+            <li><div class="check">✓</div><span>Why most traders lose (and how to stop repeating it)</span></li>
+          </ul>
+
+          <div class="urgency">
+            ⚠️ This playbook is currently <b>FREE</b> while the community is being built.
+          </div>
+
+          <div class="section">
+            <div class="kicker">WHO THIS IS FROM</div>
+            <div class="h3">Coach Keith — Next Level Trading System</div>
+            <p class="muted" style="margin:0">
+              This isn’t signals. This isn’t gambling. This is a <b>rule-based framework</b> built for real people who want consistency, not hype.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Opt-in -->
+      <div class="card">
+        <div class="pad">
+          <div class="form-title">Get Instant Access (FREE)</div>
+          <div class="form-sub">Enter your email and I’ll send the Playbook immediately.</div>
+
+          <!-- Replace FORM_ACTION_URL with your GetResponse form endpoint.
+               If you use GetResponse embedded forms, paste their script instead of this form. -->
+          <form id="leadForm" action="FORM_ACTION_URL" method="POST">
+            <input type="text" name="first_name" placeholder="First name (optional)" autocomplete="given-name" />
+            <input type="email" name="email" placeholder="Email address" required autocomplete="email" />
+            <button class="btn" type="submit">Send Me the Free Playbook</button>
+          </form>
+
+          <div class="fine">Your email is safe. No spam. Unsubscribe anytime.</div>
+
+          <div class="section">
+            <div class="kicker">BONUS</div>
+            <div class="h3">Join the FREE Telegram Trading Community</div>
+            <p class="muted" style="margin:0 0 10px;">
+              Live trade breakdowns • entry confirmations • psychology & discipline • when to trade and when to pass.
+            </p>
+            <div class="cta2">
+              <a class="btn-outline" href="https://t.me/+qaJGeqgY_ORjY2Rh" target="_blank" rel="noopener">
+                Join the FREE Telegram Group
+              </a>
+              <div class="muted" style="font-size:12px;">
+                Tip: after opt-in, your Thank You page should push people here immediately.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © <span id="yr"></span> Next Level Trading. Structure &gt; Signals • Discipline &gt; Emotion
+    </div>
+  </div>
+
+  <!-- Simple Thank You Modal (shows after submit). You can remove if GetResponse handles redirects. -->
+  <div class="modal" id="tyModal" aria-hidden="true">
+    <div class="box">
+      <h2>You’re In! Check Your Email 📬</h2>
+      <p>Your Playbook is on the way. Next step: join the free Telegram group so you don’t miss live breakdowns.</p>
+      <p>
+        <a class="btn-outline" href="https://t.me/+qaJGeqgY_ORjY2Rh" target="_blank" rel="noopener">
+          Join the FREE Telegram Group
+        </a>
+      </p>
+      <p class="muted" style="font-size:12px;margin-top:10px;">
+        If you want a full funnel: I can also write Email #2–#7 to convert to affiliate + VIP.
+      </p>
+      <p style="margin-top:14px;">
+        <button class="btn" type="button" onclick="document.getElementById('tyModal').classList.remove('open')">Close</button>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // If you use GetResponse, they typically handle the form submission + redirect.
+    // This demo script prevents a dead-end when testing locally.
+    const form = document.getElementById('leadForm');
+    const modal = document.getElementById('tyModal');
+
+    form.addEventListener('submit', function(e){
+      const action = form.getAttribute('action') || "";
+      if(action === "FORM_ACTION_URL" || action.trim() === ""){
+        // Local/test mode: prevent submission and show thank you modal
+        e.preventDefault();
+        modal.classList.add('open');
+      }
+      // Otherwise: allow normal POST to your GetResponse endpoint.
+    });
+  </script>
+</body>
+</html>
